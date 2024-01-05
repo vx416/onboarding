@@ -1,0 +1,56 @@
+// https://github.com/golang/vscode-go/blob/master/docs/settings.md#settings
+{
+    // 输入提示上下文
+    // https://github.com/golang/vscode-go/blob/master/docs/settings.md#goeditorcontextmenucommands
+    "go.editorContextMenuCommands": {
+        "toggleTestFile": true,
+        "addTags": true,
+        "removeTags": false,
+        "fillStruct": true,
+        "testAtCursor": true,
+        "testFile": false,
+        "testPackage": false,
+        "generateTestForFunction": true,
+        "generateTestForFile": false,
+        "generateTestForPackage": false,
+        "addImport": true,
+        "testCoverage": true,
+        "playground": true,
+        "debugTestAtCursor": true,
+        "benchmarkAtCursor": false
+    },
+    // go结构体tag设置, Go Add Tags Command
+    "go.addTags": {
+        "tags": "json",
+        "options": "", // 项目中不需要omitempty属性可以设置为空 default "json=omitempty"
+        "promptForTags": false,
+        "transform": "camelcase", // Options: snakecase, camelcase, lispcase, pascalcase, keep
+        "template": ""
+    },
+    "go.buildOnSave": "off",
+    "go.lintOnSave": "package",
+    "go.vetOnSave": "workspace",
+    "go.buildTags": "",
+    "go.buildFlags": [],
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": [],
+    "go.useLanguageServer": true,
+    "go.vetFlags": [],
+    "go.testOnSave": false,
+    "go.coverOnSave": false,
+    "go.useCodeSnippetsOnFunctionSuggest": true,
+    "editor.formatOnSave": true,
+    "go.formatTool": "goreturns",
+    "go.formatFlags": [],
+    "go.inferGopath": true,
+    "go.gocodeAutoBuild": false,
+    "go.testFlags": [
+        "-v"
+    ],
+    "files.autoSave": "onFocusChange",
+    "[go]": {
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    }
+}
